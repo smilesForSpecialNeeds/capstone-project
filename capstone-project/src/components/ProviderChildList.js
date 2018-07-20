@@ -17,7 +17,7 @@ class ProviderChildList extends Component {
       <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
 
       <Row>
-          <Col xs="6">
+          <Col className="schedule-list" xs="6">
       {listOfChilds}
 
       </Col>

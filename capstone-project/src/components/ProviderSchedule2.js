@@ -23,7 +23,7 @@ class ProviderSchedule2 extends Component {
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
     pickup_time: this.props.calendarItem.pickup_time,
-    date: this.props.calendarItem.date
+    date: this.props.newDate
   }
 
   handleSubmitUpdate = (e) => {
@@ -103,7 +103,7 @@ class ProviderSchedule2 extends Component {
             <CardText> <strong>Schedule Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
            {this.props.calendarItem.event_name}</CardText>
-            <CardText><strong>Child Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
+            <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
             <CardText><strong>Pickup Location: </strong> {this.props.calendarItem.pickup_address}</CardText>
             <CardText><strong>Pickup Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>

@@ -7,7 +7,7 @@ import ProviderChildList from './ProviderChildList'
 import { userLogout } from '../redux/actions/auth'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 
 
 
@@ -50,9 +50,10 @@ class ProviderMain extends Component {
 	}
   render(){
     return(
-      <div >
-      <div className="SideNav">
-      <Nav vertical >
+      <Row>
+      <Col className="SideNav" xs="3">
+
+      <Nav vertical style={{height: '100vh'}}>
         <NavItem>
 
           <NavLink href="/provider"><strong>Provider Dashboard </strong></NavLink>
@@ -71,7 +72,7 @@ class ProviderMain extends Component {
         <NavItem>
           <NavLink onClick={() => {
             this.handleSubmit('view_child')
-          }}><strong>Children</strong></NavLink>
+          }}><strong>Clients</strong></NavLink>
         </NavItem>
 
         <NavItem>
@@ -82,16 +83,16 @@ class ProviderMain extends Component {
         </NavItem>
 
         </Nav>
+        </Col>
 
-				</div>
-				<div style={{paddingLeft: '27em'}}>
+			<Col xs="8" style={{padding: 0}}>
 					{this.state.isToggleCalendar ? <ProviderCalendar/>  : null}
 					{this.state.isToggleMessages ? <ProviderMessageList/> : null}
 					{this.state.isToggleCreateMessage ? <ProviderCreateMessage/> : null}
           {this.state.isToggleViewSchedule ? <ProviderScheduleList2/> : null}
           {this.state.isToggleViewChild ? <ProviderChildList/> : null}
-				</div>
-      </div>
+				</Col>
+      </Row>
     )
   }
 }

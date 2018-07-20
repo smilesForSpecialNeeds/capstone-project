@@ -20,7 +20,7 @@ class AdminChildList extends Component {
       <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
 
       <Row>
-          <Col xs="6">
+          <Col xs="6" className="child-list">
       {listOfChilds}
 
       </Col>

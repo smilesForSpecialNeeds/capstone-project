@@ -43,7 +43,7 @@ class AdminEditCalendar extends Component {
           <Label for="exampleTitle" sm={2}></Label>
           <Col sm={10}>
             <Input type="text" name="provider_name" value={this.state.provider_name}
-            onChange={(e)=> this.setState({provider_name: e.target.value})} id="exampleTitle" placeholder="Enter Note" />
+            onChange={(e)=> this.setState({provider_name: e.target.value})} id="exampleTitle" placeholder="Provider Name" />
           </Col>
         </FormGroup>
         <FormGroup row >
@@ -57,21 +57,21 @@ class AdminEditCalendar extends Component {
           <Label for="exampleTitle" sm={2}></Label>
           <Col sm={10}>
             <Input type="text" name="note" value={this.state.assigned_child}
-            onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleTitle" placeholder="Child Name" />
+            onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleTitle" placeholder="Client Name" />
           </Col>
         </FormGroup>
         <FormGroup row >
           <Label for="exampleTitle" sm={2}></Label>
           <Col sm={10}>
             <Input type="text" name="child_img" value={this.state.child_img}
-            onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleTitle" placeholder="Child Image" />
+            onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleTitle" placeholder="Client Image" />
           </Col>
         </FormGroup>
         <FormGroup row >
           <Label for="exampleTitle" sm={2}></Label>
           <Col sm={10}>
             <Input type="text" name="note" value={this.state.child_age}
-            onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleTitle" placeholder="Child Age" />
+            onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleTitle" placeholder="Client Age" />
           </Col>
         </FormGroup>
         <FormGroup row >

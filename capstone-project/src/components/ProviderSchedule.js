@@ -61,7 +61,7 @@ class ProviderSchedule extends Component {
       {this.state.formSubmitted ? (
       <div>
 						<Modal
-							style={{ marginTop: '200px', height: '275px', width: '500px' }}
+							style={{ marginTop: '100px', height: '70vh', width: '500px' }}
 							isOpen={this.state.formSubmitted}
 							toggle={this.toggle}
 							className={this.props.className}
@@ -70,7 +70,7 @@ class ProviderSchedule extends Component {
 								style={{ fontSize: '15px', backgroundColor: '#E0E0E0' }}
 								toggle={this.formSubmitted}
 							>
-              <Form style={{  fontSize:'20px', color:'#1476A8',padding: '1em', marginLeft: '1em', marginRight: '3em', marginTop: '3em', marginBottom: '1em'}} onSubmit={this.handleSubmitUpdate}>
+              <Form style={{  fontSize:'20px', color:'#1476A8', marginLeft: '1em', marginRight: '3em', marginTop: '3em', marginBottom: '1em'}} onSubmit={this.handleSubmitUpdate}>
 
 
                 <FormGroup row >
@@ -84,7 +84,7 @@ class ProviderSchedule extends Component {
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="provider_name" value={this.state.event_name}
-                    onChange={(e)=> this.setState({event_name: e.target.value})} id="exampleTitle" placeholder="Enter Note" />
+                    onChange={(e)=> this.setState({event_name: e.target.value})} id="exampleTitle" placeholder="Provider Name" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >
@@ -98,21 +98,21 @@ class ProviderSchedule extends Component {
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="note" value={this.state.assigned_child}
-                    onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleTitle" placeholder="Child Name" />
+                    onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleTitle" placeholder="Client Name" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="child_img" value={this.state.child_img}
-                    onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleTitle" placeholder="Child Image" />
+                    onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleTitle" placeholder="Client Image" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="note" value={this.state.child_age}
-                    onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleTitle" placeholder="Child Age" />
+                    onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleTitle" placeholder="Client Age" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >
@@ -177,7 +177,7 @@ class ProviderSchedule extends Component {
             <CardText> <strong>Assignment Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
            {this.props.calendarItem.event_name}</CardText>
-            <CardText><strong>Child Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
+            <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
             <CardText><strong>Pickup Location: </strong> {this.props.calendarItem.pickup_address}</CardText>
             <CardText><strong>Pickup Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>

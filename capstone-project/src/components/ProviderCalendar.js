@@ -15,25 +15,35 @@ class ProviderCalendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      selectedEvent: {}
     };
 
     this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
+  toggle = (...args) => {
+    console.log('calendar', args[0])
+    let theEvent = this.props.calendar.filter(event => event._id == args[0].id)[0]
+    console.log('the event', theEvent)
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      selectedEvent: theEvent
     });
   }
-
+  toggleClose = () => {
+    this.setState({
+      modal: !this.state.modal
+    })
+  }
 
 
   consolidateEventData = (arr) => arr.map(event => {
     return   {
       'start': event.date,
       'end': event.date,
-      'title': event.assigned_child
+      'title': event.assigned_child,
+      'id': event._id
 
     }
   })
@@ -42,13 +52,13 @@ class ProviderCalendar extends React.Component {
 
 
   render(){
-    let listOfCalendars = this.props.calendar.filter(item => item.event_name === this.props.user.name)
+    let listOfCalendars = this.props.calendar.filter(item => item.event_name === this.props.user.name )
     console.log('users in Provider Calendar', this.props.user)
 
 
     return(
 
-      <div style={{height: '50em', padding: '3em', marginLeft: '4em'}}>
+    <div style={{height: '40em', marginLeft: '6em', marginTop: '2em'}}>
 
       <BigCalendar
         selectable
@@ -58,14 +68,18 @@ class ProviderCalendar extends React.Component {
         onSelectEvent={this.toggle}
    />
    <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-     <ModalHeader toggle={this.toggle}>Test</ModalHeader>
+     <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
      <ModalBody>
-      <h5>Scheduled Event: Hello</h5>
+
+      <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
+
+      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+
+      <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
+      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
+      <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
      </ModalBody>
-     <ModalFooter>
-       <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-       <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-     </ModalFooter>
    </Modal>
 
       </div>

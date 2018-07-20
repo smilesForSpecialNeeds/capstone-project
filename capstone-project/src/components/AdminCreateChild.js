@@ -33,7 +33,7 @@ handleSubmit = (e) => {
 
 
       <FormGroup>
-        <Label for="exampleRegister">NEW CHILD</Label>
+        <Label for="exampleRegister">NEW CLIENT</Label>
         <Input plaintext></Input>
       </FormGroup>
 
@@ -41,7 +41,7 @@ handleSubmit = (e) => {
       <Label for="exampleTitle" sm={2}></Label>
       <Col sm={10}>
         <Input type="text" name="child_name" value={this.state.child_name}
-        onChange={(e)=> this.setState({child_name: e.target.value})} id="exampleTitle" placeholder="Child Name" />
+        onChange={(e)=> this.setState({child_name: e.target.value})} id="exampleTitle" placeholder="Client Name" />
       </Col>
     </FormGroup>
     <FormGroup row>
@@ -55,7 +55,7 @@ handleSubmit = (e) => {
       <Label for="exampleImage" sm={2}></Label>
       <Col sm={10}>
         <Input type="text" name="img" value={this.state.child_img}
-        onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleImage" placeholder="Child Image" />
+        onChange={(e)=> this.setState({child_img: e.target.value})} id="exampleImage" placeholder="Client Image" />
       </Col>
     </FormGroup>
 
@@ -69,7 +69,7 @@ handleSubmit = (e) => {
         <Label for="exampleDate" sm={2}></Label>
         <Col sm={10}>
           <Input type="text" name="birthdate" value={this.state.birthdate}
-          onChange={(e)=> this.setState({birthdate: e.target.value})} id="exampleDate" placeholder="Child Birthdate" />
+          onChange={(e)=> this.setState({birthdate: e.target.value})} id="exampleDate" placeholder="Client Birthdate" />
         </Col>
       </FormGroup>
       <FormGroup row>
@@ -83,7 +83,7 @@ handleSubmit = (e) => {
         <Label for="exampleDate" sm={2}></Label>
         <Col sm={10}>
           <Input type="text" name="age" value={this.state.age}
-          onChange={(e)=> this.setState({age: e.target.value})} id="exampleDate" placeholder="Child Age" />
+          onChange={(e)=> this.setState({age: e.target.value})} id="exampleDate" placeholder="Client Age" />
         </Col>
       </FormGroup>
       <FormGroup row>

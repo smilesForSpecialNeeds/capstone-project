@@ -11,22 +11,30 @@ BigCalendar.momentLocalizer(moment);
 
 
 class Calendar extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      selectedEvent: {}
     };
 
     this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
+  toggle = (...args) => {
+    console.log('calendar', args[0])
+    let theEvent = this.props.calendar.filter(event => event._id == args[0].id)[0]
+    console.log('the event', theEvent)
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      selectedEvent: theEvent
     });
   }
-
+  toggleClose = () => {
+  this.setState({
+    modal: !this.state.modal
+  })
+  }
 
 
 
@@ -34,10 +42,10 @@ class Calendar extends React.Component {
     return   {
       'start': event.date,
       'end': event.date,
-      'title': event.event_name
+      'title': event.event_name,
+      'id': event._id
     }
   })
-
   render(){
     // let listOfCalendars = this.props.calendar.map(item => item)
     // console.log(listOfCalendars)
@@ -55,14 +63,15 @@ class Calendar extends React.Component {
 
    />
    <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-     <ModalHeader toggle={this.toggle}>Test</ModalHeader>
+     <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
      <ModalBody>
-      <h5>Scheduled Event: {this.props.calendar.event_name}</h5>
+
+      <h6><strong>Event Name:</strong> {this.state.selectedEvent.event_name}</h6>
+      <h6><strong>Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
+      <h6><strong>Start Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>End Time:</strong> {this.state.selectedEvent.activities_end}</h6>
+
      </ModalBody>
-     <ModalFooter>
-       <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-       <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-     </ModalFooter>
    </Modal>
 
       </div>

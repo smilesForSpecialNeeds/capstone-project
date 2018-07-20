@@ -94,6 +94,7 @@ class AdminMain extends Component {
     return(
 
       <Row>
+
       <Col className="SideNav" xs="3">
 
       <Nav vertical style={{height: '100vh'}}>
@@ -164,7 +165,7 @@ class AdminMain extends Component {
           {this.state.isToggleNewProvider ? <AdminCreateProvider/> : null}
 
 				</Col>
-
+        
     </Row>
     )
   }

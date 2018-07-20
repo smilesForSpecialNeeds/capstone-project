@@ -17,7 +17,7 @@ class ProviderScheduleList extends Component {
       <div style={{ marginBottom: '3em'}}>
 
       <Row>
-          <Col xs="5">
+          <Col className="schedule-list" xs="5">
 
               {listOfCalendars}
 

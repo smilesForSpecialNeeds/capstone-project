@@ -56,7 +56,7 @@ class AdminProvider extends Component {
         console.log('state in admin child-update', this.state)
     return(
 
-      <div>
+      <div >
       {this.state.formSubmitted ? (
    <div>
          <Modal
@@ -169,7 +169,8 @@ class AdminProvider extends Component {
 
       <Row>
         <Col >
-          <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+
+          <Card body  style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <img src={this.props.providerItem.provider_img} alt="Generic placeholder image" style={{width:'100px', height:'100px', marginLeft: '10px'}} /></CardText>
             <CardText> <strong>Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong> {this.props.providerItem.name}</CardText>
@@ -186,7 +187,9 @@ class AdminProvider extends Component {
 
           </Row>
           </Card>
+
         </Col>
+
 
       </Row>
 

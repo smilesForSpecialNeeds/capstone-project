@@ -77,7 +77,6 @@
     margin-bottom: 30px;
     margin-top: 30px;
     transition: transform .2s;
-
 }
 .responsive + .responsive {
   margin-top: 20px;
@@ -85,13 +84,33 @@
 .photobomb{
   height:100%;
   width:100%;
-
 }
 .photo-div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+.child-list {
+height:700px;
+width:5em;
+overflow:hidden;
+overflow-y:scroll;
+margin-top: 3em;
+}
+.provider-list {
+height:625px;
+width: 5em;
+overflow:hidden;
+overflow-y:scroll;
+margin-top: 3em;
+}
+.schedule-list{
+  height:625px;
+  width: 5em;
+  overflow:hidden;
+  overflow-y:scroll;
+  margin-top: 3em;
 }
 .container {
     display: flex;
@@ -131,16 +150,11 @@
 }
 .SideNav{
     cursor: -webkit-grab; cursor: grab;
-    list-style-type: none;
-    border-right: solid;
-    border-width: thin;
     margin: 0;
     padding: 0;
     width: 25%;
     background-color: rgba(0,151,201, 0.1);
-    height: 100%; /* Full height */
-    position: absolute;; /* Make it stick, even on scroll */
-     /* Enable scrolling if the sidenav has too much content */
+    height:100%
 }
 .column {
     float: left;

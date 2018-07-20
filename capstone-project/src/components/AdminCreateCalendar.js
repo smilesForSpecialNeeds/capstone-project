@@ -33,8 +33,8 @@ handleSubmit = (e) => {
     return(
       <div>
 
-      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)'}}>
-  <Form style={{padding: '1em'}} onSubmit={this.handleSubmit}>
+      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '1.5em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '6em', width: '25em'}}>
+  <Form style={{padding: '1em', marginRight: '2em'}} onSubmit={this.handleSubmit}>
 
   <FormGroup>
     <Label for="exampleRegister">NEW SCHEDULE</Label>
@@ -59,14 +59,14 @@ handleSubmit = (e) => {
     <FormGroup row>
         <Label for="exampleText" sm={2}></Label>
         <Col sm={10}>
-          <Input type="text" name="text" value={this.state.assigned_child} onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleText" placeholder="Child Name" />
+          <Input type="text" name="text" value={this.state.assigned_child} onChange={(e)=> this.setState({assigned_child: e.target.value})} id="exampleText" placeholder="Client Name" />
         </Col>
       </FormGroup>
       <FormGroup row>
         <Label for="exampleDate" sm={2}></Label>
         <Col sm={10}>
           <Input type="text" name="age" value={this.state.child_age}
-          onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleDate" placeholder="Child Age" />
+          onChange={(e)=> this.setState({child_age: e.target.value})} id="exampleDate" placeholder="Client Age" />
         </Col>
       </FormGroup>
 

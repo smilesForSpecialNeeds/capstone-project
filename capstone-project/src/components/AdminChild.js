@@ -77,7 +77,7 @@ componentDidMount(props){
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="child_name" value={this.state.child_name}
-                    onChange={(e)=> this.setState({child_name: e.target.value})} id="exampleTitle" placeholder="Child Name" />
+                    onChange={(e)=> this.setState({child_name: e.target.value})} id="exampleTitle" placeholder="Client Name" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >
@@ -98,7 +98,7 @@ componentDidMount(props){
                   <Label for="exampleTitle" sm={2}></Label>
                   <Col sm={10}>
                     <Input type="text" name="note" value={this.state.age}
-                    onChange={(e)=> this.setState({age: e.target.value})} id="exampleTitle" placeholder="Child Age" />
+                    onChange={(e)=> this.setState({age: e.target.value})} id="exampleTitle" placeholder="Client Age" />
                   </Col>
                 </FormGroup>
                 <FormGroup row >

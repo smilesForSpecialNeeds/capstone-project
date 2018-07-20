@@ -51,7 +51,7 @@ export const deleteProvider = id => {
 			let newProvider = await axios.delete(`http://localhost:8000/api/provider/${id}`,{ headers: { Authorization: authHeader}})
 			dispatch({
 				type: DELETE_PROVIDER_SUCCESS,
-				payload: newProvider.data[0]
+				payload: newProvider.data
 			})
 		} catch (err) {
 			dispatch({
