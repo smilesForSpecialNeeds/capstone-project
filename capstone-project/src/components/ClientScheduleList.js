@@ -1,38 +1,39 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ClientSchedule from './ClientSchedule'
-import { Col, Button, Form, FormGroup, Label, Input, FormText, Row } from 'reactstrap';
-import { connect } from 'react-redux'
-
+import {
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  Row
+} from 'reactstrap';
+import {connect} from 'react-redux'
 
 class ClientScheduleList extends Component {
 
-  render(){
-    console.log('props in admin child list',this.props)
-    const listOfCalendars =  this.props.calendar.map(item =>
-			<ClientSchedule key={item._id} calendarItem={item} />
-    )
+  render() {
+    console.log('props in admin child list', this.props)
+    const listOfCalendars = this.props.calendar.map(item => <ClientSchedule key={item._id} calendarItem={item}/>)
 
-    return(
-      <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+    return (<div style={{
+        marginBottom: '3em',
+        marginLeft: '2em'
+      }}>
 
       <Row>
-          <Col xs="6">
-      {listOfCalendars}
+        <Col xs="6">
+          {listOfCalendars}
+        </Col>
+        <Col xs="6"></Col>
+      </Row>
 
-      </Col>
-            <Col xs="6" >
-
-            </Col>
-
-        </Row>
-
-
-
-      </div>
-    )
+    </div>)
   }
 }
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {calendar: state.calendarReducer, user: state.userReducer}
 }
 

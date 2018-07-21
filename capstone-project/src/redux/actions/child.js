@@ -12,9 +12,12 @@ export const UPDATE_CHILD_FAILED = 'UPDATE_CHILD_FAILED'
 export const fetchChild = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let child = await axios.get('http://localhost:8000/api/child', { headers: { Authorization: authHeader}})
-
+			let authHeader = localStorage.getItem('admin')
+			let child = await axios.get('http://localhost:8000/api/child', {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: FETCH_CHILD_SUCCESS,
 				payload: child
@@ -30,8 +33,12 @@ export const fetchChild = () => {
 export const addChild = child => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let newChild = await axios.post(`http://localhost:8000/api/child`, child, { headers: { Authorization: authHeader}})
+			let authHeader = localStorage.getItem('admin')
+			let newChild = await axios.post(`http://localhost:8000/api/child`, child, {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: ADD_CHILD_SUCCESS,
 				payload: newChild
@@ -44,13 +51,15 @@ export const addChild = child => {
 		}
 	}
 }
-export const deleteChild= id  => {
+export const deleteChild = id => {
 	return async dispatch => {
-  let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
 			let newChild = await axios.delete(`http://localhost:8000/api/child/${id}`, {
-        headers: { Authorization: authHeader }
-      })
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: DELETE_CHILD_SUCCESS,
 				payload: newChild.data
@@ -66,13 +75,16 @@ export const deleteChild= id  => {
 }
 export const updateChild = (child, id) => {
 	return async dispatch => {
-    let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
 			let childUpdate = await axios.patch(
 				`http://localhost:8000/api/child/edit/${id}`,
-				child, { headers: { Authorization: authHeader}}
+				child, {
+					headers: {
+						Authorization: authHeader
+					}
+				}
 			)
-
 			dispatch({
 				type: UPDATE_CHILD_SUCCESS,
 				payload: childUpdate.data

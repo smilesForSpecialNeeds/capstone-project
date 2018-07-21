@@ -1,47 +1,48 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import AdminProvider from './AdminProvider'
-import { Col, Button, Form, FormGroup, Label, Input, FormText, Row } from 'reactstrap';
+import {
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  Row
+} from 'reactstrap';
 import AdminCreateProvider from './AdminCreateProvider'
-import { connect } from 'react-redux'
-
+import {connect} from 'react-redux'
 
 class AdminProviderList extends Component {
 
-  render(){
-    console.log(this.props.provider)
-    if(this.props.provider){
-      const listOfProviders =  this.props.provider.map(item =>
-  			<AdminProvider key={item.id} providerItem={item} />
-      )
+  render() {
+    if (this.props.provider) {
+      const listOfProviders = this.props.provider.map(item => <AdminProvider key={item.id} providerItem={item}/>)
 
-      return(
-        <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+      return (<div style={{
+          marginBottom: '3em',
+          marginLeft: '2em'
+        }}>
 
         <Row>
-            <Col className="provider-list"  xs="6">
-        {listOfProviders}
+          <Col className="provider-list" xs="6">
+            {listOfProviders}
 
-        </Col>
-              <Col xs="6" >
-              <AdminCreateProvider/>
-              </Col>
+          </Col>
+          <Col xs="6">
+            <AdminCreateProvider/>
+          </Col>
 
-          </Row>
+        </Row>
 
-
-
-        </div>
-      )
-    }else{
+      </div>)
+    } else {
       console.log("I don't have it yet!")
-      return(
-        <div>Loading....
-        </div>
-      )
+      return (<div>Loading...</div>)
     }
   }
 }
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {provider: state.providerReducer, user: state.userReducer}
 }
 

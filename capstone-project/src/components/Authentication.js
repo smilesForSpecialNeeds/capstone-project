@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 export default function(ComposedComponent) {
   class Authentication extends Component {
@@ -11,19 +11,19 @@ export default function(ComposedComponent) {
     }
 
     componentWillUpdate(nextProps) {
-      if (!localStorage.getItem('admin') ) {
+      if (!localStorage.getItem('admin')) {
         this.props.history.push('/')
       }
     }
 
     render() {
 
-      return <ComposedComponent {...this.props} />
+      return <ComposedComponent {...this.props}/>
     }
   }
 
   function mapStateToProps(state) {
-    return { admin: state.admin}
+    return {admin: state.admin}
   }
 
   return connect(mapStateToProps)(Authentication)

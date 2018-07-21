@@ -15,7 +15,6 @@ export default (state = initialState, action) => {
 	switch (action.type) {
 		case FETCH_CHILD_SUCCESS:
 			return [...action.payload.data]
-
 		case FETCH_CHILD_FAILED:
 			return action.payload
 		case ADD_CHILD_SUCCESS:
@@ -23,15 +22,12 @@ export default (state = initialState, action) => {
 		case ADD_CHILD_FAILED:
 			return action.payload
 		case DELETE_CHILD_SUCCESS:
-    
-      const childId = action.payload._id
-
+			const childId = action.payload._id
 			return state.filter(child => child._id != childId)
-
 		case DELETE_CHILD_FAILED:
 			return action.payload
 		case UPDATE_CHILD_SUCCESS:
-			return  action.payload
+			return action.payload
 		case UPDATE_CHILD_FAILED:
 			return action.payload
 		default:
