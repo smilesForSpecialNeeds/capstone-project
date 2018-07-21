@@ -4,14 +4,10 @@ import Moment from 'react-moment'
 import moment from 'moment'
 import { Media } from 'reactstrap';
 
-
-
-
 class ProviderChild extends Component {
 
   state = {
     formSubmitted: false
-
   }
 
 

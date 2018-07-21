@@ -12,9 +12,12 @@ export const UPDATE_PROVIDER_FAILED = 'UPDATE_PROVIDER_FAILED'
 export const fetchProvider = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let provider = await axios.get('http://localhost:8000/api/provider', { headers: { Authorization: authHeader}})
-
+			let authHeader = localStorage.getItem('admin')
+			let provider = await axios.get('http://localhost:8000/api/provider', {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: FETCH_PROVIDER_SUCCESS,
 				payload: provider
@@ -30,8 +33,12 @@ export const fetchProvider = () => {
 export const addProvider = provider => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let newProvider = await axios.post(`http://localhost:8000/api/provider`, provider, { headers: { Authorization: authHeader}})
+			let authHeader = localStorage.getItem('admin')
+			let newProvider = await axios.post(`http://localhost:8000/api/provider`, provider, {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: ADD_PROVIDER_SUCCESS,
 				payload: newProvider
@@ -46,9 +53,13 @@ export const addProvider = provider => {
 }
 export const deleteProvider = id => {
 	return async dispatch => {
-      let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
-			let newProvider = await axios.delete(`http://localhost:8000/api/provider/${id}`,{ headers: { Authorization: authHeader}})
+			let newProvider = await axios.delete(`http://localhost:8000/api/provider/${id}`, {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: DELETE_PROVIDER_SUCCESS,
 				payload: newProvider.data
@@ -63,11 +74,15 @@ export const deleteProvider = id => {
 }
 export const updateProvider = (provider, id) => {
 	return async dispatch => {
-      let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
 			let providerUpdate = await axios.patch(
 				`http://localhost:8000/api/provider/edit/${id}`,
-				provider, { headers: { Authorization: authHeader}}
+				provider, {
+					headers: {
+						Authorization: authHeader
+					}
+				}
 			)
 
 			dispatch({

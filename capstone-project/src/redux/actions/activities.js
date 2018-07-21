@@ -12,9 +12,12 @@ export const UPDATE_ACTIVITIES_FAILED = 'UPDATE_ACTIVITIES_FAILED'
 export const fetchActivities = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let activities = await axios.get('http://localhost:8000/api/activities',
-        { headers: { Authorization: authHeader}})
+			let authHeader = localStorage.getItem('admin')
+			let activities = await axios.get('http://localhost:8000/api/activities', {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: FETCH_ACTIVITIES_SUCCESS,
 				payload: activities
@@ -30,9 +33,13 @@ export const fetchActivities = () => {
 export const addActivities = activity => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
+			let authHeader = localStorage.getItem('admin')
 			let newActivity = await axios.post(`http://localhost:8000/api/activities`,
-        activity, { headers: { Authorization: authHeader}})
+				activity, {
+					headers: {
+						Authorization: authHeader
+					}
+				})
 			dispatch({
 				type: ADD_ACTIVITIES_SUCCESS,
 				payload: newActivity
@@ -47,9 +54,13 @@ export const addActivities = activity => {
 }
 export const deleteActivities = id => {
 	return async dispatch => {
-    let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+		let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
 		try {
-			let newActivity = await axios.delete(`http://localhost:8000/api/activities/${id}`,{ headers: { Authorization: authHeader}})
+			let newActivity = await axios.delete(`http://localhost:8000/api/activities/${id}`, {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: DELETE_ACTIVITIES_SUCCESS,
 				payload: newActivity.data[0]
@@ -64,11 +75,15 @@ export const deleteActivities = id => {
 }
 export const updateActivities = (activity, id) => {
 	return async dispatch => {
-    let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+		let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
 		try {
 			let activityUpdate = await axios.patch(
 				`http://localhost:8000/api/activities/edit/${id}`,
-				activity, { headers: { Authorization: authHeader}}
+				activity, {
+					headers: {
+						Authorization: authHeader
+					}
+				}
 			)
 
 			dispatch({

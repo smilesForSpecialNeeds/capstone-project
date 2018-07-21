@@ -30,11 +30,11 @@ class AdminCalendar extends React.Component {
       selectedEvent: theEvent
     });
   }
-toggleClose = () => {
-  this.setState({
-    modal: !this.state.modal
-  })
-}
+  toggleClose = () => {
+    this.setState({
+      modal: !this.state.modal
+    })
+  }
 
 
 
@@ -54,27 +54,27 @@ toggleClose = () => {
 
       <div style={{height: '40em', marginLeft: '6em', marginTop: '2em'}}>
 
-      <BigCalendar
-        selectable
-        popup events={this.consolidateEventData(listOfCalendars)}
-        defaultDate={new Date()}
-        defaultView="month"
-        onSelectEvent={this.toggle}
-   />
-   <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-     <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
-     <ModalBody>
+        <BigCalendar
+          selectable
+          popup events={this.consolidateEventData(listOfCalendars)}
+          defaultDate={new Date()}
+          defaultView="month"
+          onSelectEvent={this.toggle}
+        />
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
+          <ModalBody>
 
-      <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
+            <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
 
-      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+            <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
 
-      <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
-      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
-      <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
-      <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
-     </ModalBody>
-   </Modal>
+            <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
+            <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+            <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
+            <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
+          </ModalBody>
+        </Modal>
       </div>
 
     )

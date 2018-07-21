@@ -27,7 +27,7 @@ class App extends Component {
       <Router>
 				<div>
 					<TopNav />
-
+          
 					<Route exact path="/" component={Home} />
 					<Route exact path="/login" component={Login} />
           <Route exact path="/testimonial" component={TestimonialList} />
@@ -41,9 +41,6 @@ class App extends Component {
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/ourpeople" component={OurPeople} />
-
-
-
 				</div>
 			</Router>
     );

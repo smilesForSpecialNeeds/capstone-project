@@ -11,12 +11,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-  import theImage from '../images/26457892_8rab.png'
-  import theImage2 from '../images/Smiles for Special Needs.jpg'
-
-
-
-
+import theImage from '../images/26457892_8rab.png'
+import theImage2 from '../images/Smiles for Special Needs.jpg'
 
 class TopNav extends Component {
 
@@ -78,9 +74,6 @@ class TopNav extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-
-
-    
     )
   }
 }

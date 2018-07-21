@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import BigCalendar from 'react-big-calendar'
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from 'moment';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 BigCalendar.momentLocalizer(moment);
-
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -31,56 +28,55 @@ class Calendar extends React.Component {
     });
   }
   toggleClose = () => {
-  this.setState({
-    modal: !this.state.modal
-  })
+    this.setState({
+      modal: !this.state.modal
+    })
   }
 
-
-
   consolidateEventData = (arr) => arr.map(event => {
-    return   {
-      'start': event.date,
-      'end': event.date,
-      'title': event.event_name,
-      'id': event._id
-    }
+    return {'start': event.date, 'end': event.date, 'title': event.event_name, 'id': event._id}
   })
-  render(){
+  render() {
     // let listOfCalendars = this.props.calendar.map(item => item)
     // console.log(listOfCalendars)
-    let listOfCalendars = this.props.calendar.filter(item => !item.assigned_child ? item : '')
-    return(
+    let listOfCalendars = this.props.calendar.filter(
+      item => !item.assigned_child
+      ? item
+      : '')
+    return (<div style={{
+        height: '50em',
+        padding: '3em',
+        marginLeft: '3em'
+      }}>
 
-      <div style={{height: '50em', padding: '3em', marginLeft: '3em'}}>
+      <BigCalendar selectable="selectable" popup="popup" events={this.consolidateEventData(listOfCalendars)} defaultDate={new Date()} defaultView="month" onSelectEvent={this.toggle}/>
+      <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <ModalHeader toggle={this.toggleClose}>
+          <strong>Schedule Event</strong>
+        </ModalHeader>
+        <ModalBody>
 
-      <BigCalendar
-        selectable
-        popup events={this.consolidateEventData(listOfCalendars)}
-        defaultDate={new Date()}
-        defaultView="month"
-        onSelectEvent={this.toggle}
+          <h6>
+            <strong>Event Name:</strong>
+            {this.state.selectedEvent.event_name}</h6>
+          <h6>
+            <strong>Address:</strong>
+            {this.state.selectedEvent.pickup_address}</h6>
+          <h6>
+            <strong>Start Time:</strong>
+            {this.state.selectedEvent.pickup_time}</h6>
+          <h6>
+            <strong>End Time:</strong>
+            {this.state.selectedEvent.activities_end}</h6>
 
-   />
-   <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-     <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
-     <ModalBody>
+        </ModalBody>
+      </Modal>
 
-      <h6><strong>Event Name:</strong> {this.state.selectedEvent.event_name}</h6>
-      <h6><strong>Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
-      <h6><strong>Start Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
-      <h6><strong>End Time:</strong> {this.state.selectedEvent.activities_end}</h6>
-
-     </ModalBody>
-   </Modal>
-
-      </div>
-
-    )
+    </div>)
   }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {calendar: state.calendarReducer}
 }
 

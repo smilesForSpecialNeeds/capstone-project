@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import BigCalendar from 'react-big-calendar'
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from 'moment';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 BigCalendar.momentLocalizer(moment);
-
 
 class ProviderCalendar extends React.Component {
 
@@ -37,62 +34,63 @@ class ProviderCalendar extends React.Component {
     })
   }
 
-
   consolidateEventData = (arr) => arr.map(event => {
-    return   {
-      'start': event.date,
-      'end': event.date,
-      'title': event.assigned_child,
-      'id': event._id
-
-    }
+    return {'start': event.date, 'end': event.date, 'title': event.assigned_child, 'id': event._id}
   })
 
-
-
-
-  render(){
-    let listOfCalendars = this.props.calendar.filter(item => item.event_name === this.props.user.name )
+  render() {
+    let listOfCalendars = this.props.calendar.filter(item => item.event_name === this.props.user.name)
     console.log('users in Provider Calendar', this.props.user)
 
-
-    return(
-
-    <div style={{height: '40em', marginLeft: '6em', marginTop: '2em'}}>
+    return (<div style={{
+        height: '40em',
+        marginLeft: '6em',
+        marginTop: '2em'
+      }}>
 
       <BigCalendar
-        selectable
-        popup events={this.consolidateEventData(listOfCalendars)}
-        defaultDate={new Date()}
-        defaultView="month"
+        selectable="selectable"
+        popup="popup"
+        events={this.consolidateEventData(listOfCalendars)}
+        defaultDate={new Date()} defaultView="month"
         onSelectEvent={this.toggle}
-   />
-   <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-     <ModalHeader toggle={this.toggleClose}><strong>Schedule Event</strong></ModalHeader>
-     <ModalBody>
+      />
 
-      <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
+      <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <ModalHeader toggle={this.toggleClose}>
+          <strong>Schedule Event</strong>
+        </ModalHeader>
+        <ModalBody>
 
-      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+          <h6>
+            <strong>Provider Name:</strong>
+            {this.state.selectedEvent.event_name}</h6>
 
-      <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
-      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
-      <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
-      <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
-     </ModalBody>
-   </Modal>
+          <h6>
+            <strong>Assigned Client:</strong>
+            {this.state.selectedEvent.assigned_child}</h6>
 
-      </div>
+          <h6>
+            <strong>Pickup Address:</strong>
+            {this.state.selectedEvent.pickup_address}</h6>
+          <h6>
+            <strong>Pickup Time:</strong>
+            {this.state.selectedEvent.pickup_time}</h6>
+          <h6>
+            <strong>Hours:</strong>
+            {this.state.selectedEvent.hours}</h6>
+          <h6>
+            <strong>Hours Type:</strong>
+            {this.state.selectedEvent.hours_type}</h6>
+        </ModalBody>
+      </Modal>
 
-    )
+    </div>)
   }
 }
 
-function mapStateToProps(state){
-  return {
-    calendar: state.calendarReducer,
-    user: state.authReducer
-  }
+function mapStateToProps(state) {
+  return {calendar: state.calendarReducer, user: state.authReducer}
 }
 
 export default connect(mapStateToProps)(ProviderCalendar)

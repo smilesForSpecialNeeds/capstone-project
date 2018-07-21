@@ -12,9 +12,12 @@ export const UPDATE_TESTIMONIAL_FAILED = 'UPDATE_TESTIMONIAL_FAILED'
 export const fetchTestimonial = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let testimonial = await axios.get('http://localhost:8000/api/testimonial', { headers: { Authorization: authHeader}})
-
+			let authHeader = localStorage.getItem('admin')
+			let testimonial = await axios.get('http://localhost:8000/api/testimonial', {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: FETCH_TESTIMONIAL_SUCCESS,
 				payload: testimonial
@@ -30,9 +33,13 @@ export const fetchTestimonial = () => {
 export const addTestimonial = testimonial => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
+			let authHeader = localStorage.getItem('admin')
 			let newTestimonial = await axios.post(`http://localhost:8000/api/testimonial`,
-        testimonial, { headers: { Authorization: authHeader}})
+				testimonial, {
+					headers: {
+						Authorization: authHeader
+					}
+				})
 			dispatch({
 				type: ADD_TESTIMONIAL_SUCCESS,
 				payload: newTestimonial
@@ -47,9 +54,13 @@ export const addTestimonial = testimonial => {
 }
 export const deleteTestimonial = id => {
 	return async dispatch => {
-    let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
-			let newTestimonial = await axios.delete(`http://localhost:8000/api/testimonial/${id}`,{ headers: { Authorization: authHeader}})
+			let newTestimonial = await axios.delete(`http://localhost:8000/api/testimonial/${id}`, {
+				headers: {
+					Authorization: authHeader
+				}
+			})
 			dispatch({
 				type: DELETE_TESTIMONIAL_SUCCESS,
 				payload: newTestimonial.data[0]
@@ -64,10 +75,14 @@ export const deleteTestimonial = id => {
 }
 export const updateTestimonial = (testimonial, id) => {
 	return async dispatch => {
-      let authHeader = localStorage.getItem('admin')
+		let authHeader = localStorage.getItem('admin')
 		try {
 			let testimonialUpdate = await axios.patch(
-				`http://localhost:8000/api/testimonial/edit/${id}`,{ headers: { Authorization: authHeader}})
+				`http://localhost:8000/api/testimonial/edit/${id}`, {
+					headers: {
+						Authorization: authHeader
+					}
+				})
 
 			dispatch({
 				type: UPDATE_TESTIMONIAL_SUCCESS,
