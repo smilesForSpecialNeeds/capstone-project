@@ -1,3 +1,70 @@
+## User Stories
+
+- [As a logged in Admin user, the Children tab in the side navigation bar should be changed to Clients. When I navigate to the Clients page I should see a label within each item in the list called Client name, rather than Child Name.]
+  - [Status = Pending]
+- [As a non-registered and non-logged in user I can navigate to the /calendar page and view the calendar and view details of scheduled activity events]
+  - [Status = Pending]
+- [As a non-registered and non-logged in user I can navigate to the /testimonial page and view the calendar and view a list of testimonials]
+    - [Status = Pending]
+- [As a registered user when I attempt to login and I enter the wrong credentials I am redirected back to the login page to try again]
+    - [Status = Pending]
+- [As a logged in Provider user, when I navigate to my Schedule page I will see an input box at the top of a list and an option to filter schedules by date ranges, client name, and type of hours]
+      - [Status = Pending]
+
+- [As a logged in Admin user, when I navigate to my Schedule page I will see an input box at the top of a list and an option to filter schedules by date ranges, client name, type of hours, and provider name.]
+      - [Status = Pending]
+- [As a logged in Client user, when I navigate to my Schedule page I will see an input box at the top of a list and an option to filter schedules by date ranges]
+      - [Status = Pending]
+- [As a logged in Client user, when I enter in a date range and click submit I will see only schedules for that date range appear.]
+    - [Status = Pending]
+- [As a logged in Provider user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them.]
+      - [Status = Pending]
+- [As a logged in Provider user, when I navigate to my Schedules page and then filter the schedules by date range I will see a master export button at the bottom of the list and when I click it all my total hours for that date range will be exported to an external Excel spreadsheet.]
+      - [Status = Pending]
+- [As a logged in Admin user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them. When I enter in a provider name and click submit, I will only see schedules related to that particular provider appear in the list.]
+    - [Status = Pending]
+- [As a logged in Provider user, when I navigate to my Clients page I will see an input box at the top of the client list and an option to filter clients by name]
+    - [Status = Pending]
+- [As a logged in Provider user, when I enter a particular client name into the input field and click submit I will only see that particular client show up in the list]
+    - [Status = Pending]
+- [As a logged in Provider, Client, and Admin user, when I navigate to my Messages page I will see an inbox displaying a list of messages in an inbox. The date, subject, from name, to name categories will be displayed across the top.]
+    - [Example = (https://tryolabs.com/blog/2015/04/07/react-examples-mailbox/)]
+    - [Status = Pending]
+- [As a logged in Provider, Client, and Admin user, located on my Messages page I will see a button on the top left corner of the inbox allowing me to create a new message. When I click on the button a modal box will pop up where I will see an input form with a box for to name, from name, subject, and a text area for the body. Below the input box will be a button to send. When I click the button the message will show up in the recipients inbox and I will be redirected back to my inbox.]
+    - [Status = Pending]
+- [As a logged in Provider, Client, and Admin user, located on my Messages page when I click on a particular message in the list of messages, a box will appear at the bottom of the list displaying the body of the email. The date, subject, who it's from name, and to name will be displayed at the top above the body. At the bottom of the body I will see a button to reply. When I click on the replys button, a modal with a text box will display where I can then enter text and then I will see a button below the text box to send. When I click the send button, my reply will be sent to the senders inbox and I will be redirected back to my message inbox.]
+    - [Status = Pending]
+[As a client, provider, and admin logged in user, when I click on a scheduled activity event (example: movie night, bowling, etc.) in my dashboard calendar only the name of the event, the location, the start time, and end time will only appear]
+    - [Status = Pending]
+[As an admin logged in, when I look at the main calendar I will see only one button per provider name per day and when I click that button a modal will pop up with a list of all the assigned schedules for that provider for that day. When I click on a particular schedule from the list, the details of that one specific schedule will then appear beneath the list.]
+    - [Status = Pending]
+[As an Provider and Client user logged in, when I look at the main calendar I will see activity events (example: movie night, etc.) and when I click on a specific one, a modal box will appear with the name of the event, location, start, and end time appearing]
+    - [Status = Pending]
+[As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
+    - [Status = Pending]
+[As an Admin user, when I navigate to the Activities page in my dashboard I will see a list of all the currently scheduled activities (movie night, etc.) and below each item I will see an update and delete button. To the right of the list of activities I will see an input box to create a new activity. There will be placeholder text in each input field, one for date, then name of activity event, start time, and end time. There will be a submit button below the input box. ]
+      - [Status = Pending]
+[As an Admin user, located on the Activities page in my dashboard, when I enter the details for a new activity and click submit it will appear in the list to the left and it will appear in all main calendars.]
+    - [Status = Pending]
+[As an Admin user, located on the Activities page in my dashboard, when I click on the update button underneath a particular activity in the list, and modal box will appear with the details of the event populated into input fields and the option for me to change any particular field. Beneath the input box will e a submit button and when I click it the change will take place and I will be redirected back to the activities list where I will see the change and it will also be changed on all main calendars.]
+    - [Status = Pending]
+[As an Admin user, located on the Activities page in my dashboard, when I click on the delete button for a particular activity it will be removed from the list and all main calendars.]
+    - [Status = Pending]
+- [As a logged in Admin user, when I navigate to my Provider page I will see an input box at the top of a list and an option to filter providers by name]
+    - [Status = Pending]
+- [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
+  - [Status = Pending]
+- [As a logged in Admin user, when I navigate to my Client page I will see an input box at the top of a list and an option to filter clients by name]
+    - [Status = Pending]
+- [As a logged in Admin user, when I enter in a client name and click submit I will see only clients with that name.]
+  - [Status = Pending]
+- [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
+    - [Status = Pending]
+- [As a logged in Client user, the side navigation bar will extend all the way to the bottom of the dashboard page.]
+    - [Status = Pending]
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -300,7 +367,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1989,7 +2056,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
@@ -2429,7 +2496,7 @@ To resolve this:
 1. Open an issue on the dependency's issue tracker and ask that the package be published pre-compiled.
   * Note: Create React App can consume both CommonJS and ES modules. For Node.js compatibility, it is recommended that the main entry point is CommonJS. However, they can optionally provide an ES module entry point with the `module` field in `package.json`. Note that **even if a library provides an ES Modules version, it should still precompile other ES6 features to ES5 if it intends to support older browsers**.
 
-2. Fork the package and publish a corrected version yourself. 
+2. Fork the package and publish a corrected version yourself.
 
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
