@@ -110,7 +110,7 @@ class AdminMain extends Component {
           <NavLink
           onClick={() => {
             this.handleSubmit('view_child')
-          }}><strong>Children</strong></NavLink>
+          }}><strong>Clients</strong></NavLink>
         </NavItem>
 
         <NavItem>
@@ -165,7 +165,7 @@ class AdminMain extends Component {
           {this.state.isToggleNewProvider ? <AdminCreateProvider/> : null}
 
 				</Col>
-        
+
     </Row>
     )
   }

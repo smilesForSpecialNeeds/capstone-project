@@ -1,7 +1,7 @@
 ## User Stories
 
 - [As a logged in Admin user, the Children tab in the side navigation bar should be changed to Clients. When I navigate to the Clients page I should see a label within each item in the list called Client name, rather than Child Name.]
-  - [Status = Pending]
+  - [Status = Complete]
 - [As a non-registered and non-logged in user I can navigate to the /calendar page and view the calendar and view details of scheduled activity events]
   - [Status = Pending]
 - [As a non-registered and non-logged in user I can navigate to the /testimonial page and view the calendar and view a list of testimonials]
@@ -63,7 +63,7 @@
 - [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
     - [Status = Pending]
 - [As a logged in Client user, the side navigation bar will extend all the way to the bottom of the dashboard page.]
-    - [Status = Pending]
+    - [Status = Complete]
 
 
 

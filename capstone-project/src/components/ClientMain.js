@@ -8,7 +8,7 @@ import ClientAddTestimonial from './ClientAddTestimonial'
 import { userLogout } from '../redux/actions/auth'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 
 
 
@@ -55,9 +55,10 @@ class ClientMain extends Component {
 	}
   render(){
     return(
-      <div>
-      <div className="SideNav">
-      <Nav vertical >
+      <Row>
+
+      <Col className="SideNav" xs="3">
+      <Nav vertical style={{height: '100vh'}}>
         <NavItem>
 
           <NavLink href="/client">Client Dashboard </NavLink>
@@ -87,8 +88,10 @@ class ClientMain extends Component {
         </NavItem>
         </Nav>
 
-				</div>
-				<div style={{paddingLeft: '27em'}}>
+        </Col>
+
+
+          <Col xs="8" style={{padding: 0}}>
 					{this.state.isToggleCalendar ? <ClientCalendar/>  : null}
 					{this.state.isToggleMessages ? <ClientMessageList/> : null}
 					{this.state.isToggleCreateMessage ? <ClientCreateMessage/> : null}
@@ -97,8 +100,9 @@ class ClientMain extends Component {
           {this.state.isToggleNewTestimonail ? <ClientAddTestimonial/> : null}
 
 
-				</div>
-      </div>
+          </Col>
+
+      </Row>
     )
   }
 }
