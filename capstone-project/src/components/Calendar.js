@@ -47,8 +47,7 @@ class Calendar extends React.Component {
     }
   })
   render(){
-    // let listOfCalendars = this.props.calendar.map(item => item)
-    // console.log(listOfCalendars)
+  
     let listOfCalendars = this.props.calendar.filter(item => !item.assigned_child ? item : '')
     return(
 

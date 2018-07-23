@@ -68,6 +68,7 @@ toggleClose = () => {
       <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
 
       <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+      <h6><strong>End Time:</strong> {this.state.selectedEvent.activities_end}</h6>
 
       <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
       <h6><strong>Dropoff Address:</strong> {this.state.selectedEvent.dropoff_address}</h6>

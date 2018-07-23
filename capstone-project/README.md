@@ -30,6 +30,8 @@ Complete
       - [Status = Complete]
 - [As an Admin user, located on the Activities page in my dashboard, when I click on the delete button for a particular activity it will be removed from the list and all main calendars.]
       - [Status = Complete]
+- [As a logged in Admin user, when I navigate to my Provider page I will see an input box at the top of a list and an option to filter providers by name]
+      - [Status = Complete]
 
 
 
@@ -70,8 +72,7 @@ Pending
 
 
 
-- [As a logged in Admin user, when I navigate to my Provider page I will see an input box at the top of a list and an option to filter providers by name]
-    - [Status = Pending]
+
 - [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
   - [Status = Pending]
 - [As a logged in Admin user, when I navigate to my Client page I will see an input box at the top of a list and an option to filter clients by name]
