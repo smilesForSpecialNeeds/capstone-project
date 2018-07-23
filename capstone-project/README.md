@@ -20,6 +20,8 @@ Complete
       - [Status = Complete]
 - [As a logged in Provider user, when I navigate to my Schedules page and then filter the schedules by date range I will see a master export button at the top of the list.]
       - [Status = Complete]
+- [As a logged in Provider user, when I navigate to my Clients page I will see an input box at the top of the client list and an option to filter clients by name]
+      - [Status = Complete]
 
 
 
@@ -35,8 +37,7 @@ Pending
       - [Status = Pending]
 - [As a logged in Admin user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them. When I enter in a provider name and click submit, I will only see schedules related to that particular provider appear in the list.]
     - [Status = Pending]
-- [As a logged in Provider user, when I navigate to my Clients page I will see an input box at the top of the client list and an option to filter clients by name]
-    - [Status = Pending]
+
 - [As a logged in Provider user, when I enter a particular client name into the input field and click submit I will only see that particular client show up in the list]
     - [Status = Pending]
 - [As a logged in Provider, Client, and Admin user, when I navigate to my Messages page I will see an inbox displaying a list of messages in an inbox. The date, subject, from name, to name categories will be displayed across the top.]

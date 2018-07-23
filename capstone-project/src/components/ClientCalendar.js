@@ -80,6 +80,7 @@ toggleClose = () => {
       <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
 
       <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
+      <h6><strong>Dropoff Address:</strong> {this.state.selectedEvent.dropoff_address}</h6>
       <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
       <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
       <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>

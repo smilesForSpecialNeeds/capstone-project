@@ -15,6 +15,7 @@ class AdminCreateCalendar extends Component {
   assigned_child: '',
   child_age: '',
   pickup_address: '',
+  dropoff_address: '',
   parent_name: '',
   hours_type: '',
   hours: '',
@@ -96,6 +97,13 @@ handleSubmit = (e) => {
         <Col sm={10}>
           <Input type="text" name="pickup_address" value={this.state.pickup_address}
           onChange={(e)=> this.setState({pickup_address: e.target.value})} id="exampleDate" placeholder="Pickup Address" />
+        </Col>
+      </FormGroup>
+      <FormGroup row>
+        <Label for="exampleDate" sm={2}></Label>
+        <Col sm={10}>
+          <Input type="text" name="dropoff_address" value={this.state.dropoff_address}
+          onChange={(e)=> this.setState({dropoff_address: e.target.value})} id="exampleDate" placeholder="Dropoff Address" />
         </Col>
       </FormGroup>
       <FormGroup row>

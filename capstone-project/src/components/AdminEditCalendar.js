@@ -14,6 +14,7 @@ class AdminEditCalendar extends Component {
     child_img: this.props.calendarItem.child_img,
     child_age: this.props.calendarItem.child_age,
     pickup_address: this.props.calendarItem.pickup_address,
+    dropoff_address: this.props.calendarItem.dropoff_address,
     parent_name: this.props.calendarItem.parent_name,
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
@@ -86,6 +87,13 @@ class AdminEditCalendar extends Component {
           <Col sm={10}>
             <Input type="text" name="note" value={this.state.pickup_address}
             onChange={(e)=> this.setState({pickup_address: e.target.value})} id="exampleTitle" placeholder="Pickup Address" />
+          </Col>
+        </FormGroup>
+        <FormGroup row >
+          <Label for="exampleTitle" sm={2}></Label>
+          <Col sm={10}>
+            <Input type="text" name="note" value={this.state.dropoff_address}
+            onChange={(e)=> this.setState({dropoff_address: e.target.value})} id="exampleTitle" placeholder="Dropoff Address" />
           </Col>
         </FormGroup>
         <FormGroup row>

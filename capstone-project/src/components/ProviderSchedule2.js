@@ -19,6 +19,7 @@ class ProviderSchedule2 extends Component {
     child_img: this.props.calendarItem.child_img,
     child_age: this.props.calendarItem.child_age,
     pickup_address: this.props.calendarItem.pickup_address,
+    dropoff_address: this.props.calendarItem.dropoff_address,
     parent_name: this.props.calendarItem.parent_name,
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
@@ -29,7 +30,7 @@ class ProviderSchedule2 extends Component {
   handleSubmitUpdate = (e) => {
     this.props.updateCalendar(this.state, this.props.calendarItem._id)
   }
-  
+
 
 	handleSubmit = e => {
 		e.preventDefault()
@@ -103,6 +104,7 @@ class ProviderSchedule2 extends Component {
            {this.props.calendarItem.event_name}</CardText>
             <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
             <CardText><strong>Pickup Location: </strong> {this.props.calendarItem.pickup_address}</CardText>
+            <CardText><strong>Dropoff Location: </strong> {this.props.calendarItem.dropoff_address}</CardText>
             <CardText><strong>Pickup Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>
             <CardText><strong>Hours Type: </strong> {this.props.calendarItem.hours_type}</CardText>
