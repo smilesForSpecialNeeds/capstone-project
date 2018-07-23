@@ -22,10 +22,19 @@ Complete
       - [Status = Complete]
 - [As a logged in Provider user, when I navigate to my Clients page I will see an input box at the top of the client list and an option to filter clients by name]
       - [Status = Complete]
+- [As an Admin user, when I navigate to the Activities page in my dashboard I will see a list of all the currently scheduled activities (movie night, etc.) and below each item I will see an update and delete button. To the right of the list of activities I will see an input box to create a new activity. There will be placeholder text in each input field, one for date, then name of activity event, start time, and end time. There will be a submit button below the input box. ]
+      - [Status = Complete]
+- [As an Admin user, located on the Activities page in my dashboard, when I enter the details for a new activity and click submit it will appear in the list to the left and it will appear in all main calendars.]
+      - [Status = Complete]
+- [As an Admin user, located on the Activities page in my dashboard, when I click on the update button underneath a particular activity in the list, and modal box will appear with the details of the event populated into input fields and the option for me to change any particular field. Beneath the input box will e a submit button and when I click it the change will take place and I will be redirected back to the activities list where I will see the change and it will also be changed on all main calendars.]
+      - [Status = Complete]
+- [As an Admin user, located on the Activities page in my dashboard, when I click on the delete button for a particular activity it will be removed from the list and all main calendars.]
+      - [Status = Complete]
 
 
 
 Pending
+
 - [As a logged in Client user, when I enter in a date range and click submit I will see only schedules for that date range appear.]
     - [Status = Pending]
 - [As a registered user when I attempt to login and I enter the wrong credentials I am redirected back to the login page to try again]
@@ -57,14 +66,10 @@ Pending
     - [Status = Pending]
 - [As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
     - [Status = Pending]
-- [As an Admin user, when I navigate to the Activities page in my dashboard I will see a list of all the currently scheduled activities (movie night, etc.) and below each item I will see an update and delete button. To the right of the list of activities I will see an input box to create a new activity. There will be placeholder text in each input field, one for date, then name of activity event, start time, and end time. There will be a submit button below the input box. ]
-      - [Status = Pending]
-- [As an Admin user, located on the Activities page in my dashboard, when I enter the details for a new activity and click submit it will appear in the list to the left and it will appear in all main calendars.]
-    - [Status = Pending]
-- [As an Admin user, located on the Activities page in my dashboard, when I click on the update button underneath a particular activity in the list, and modal box will appear with the details of the event populated into input fields and the option for me to change any particular field. Beneath the input box will e a submit button and when I click it the change will take place and I will be redirected back to the activities list where I will see the change and it will also be changed on all main calendars.]
-    - [Status = Pending]
-- [As an Admin user, located on the Activities page in my dashboard, when I click on the delete button for a particular activity it will be removed from the list and all main calendars.]
-    - [Status = Pending]
+
+
+
+
 - [As a logged in Admin user, when I navigate to my Provider page I will see an input box at the top of a list and an option to filter providers by name]
     - [Status = Pending]
 - [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
