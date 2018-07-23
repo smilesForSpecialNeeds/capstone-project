@@ -16,6 +16,9 @@ class ProviderScheduleList2 extends Component {
   handleFilter = () => {
 
   }
+  handleExport = () => {
+
+  }
   render(){
     console.log('user props', this.props.user)
     const listOfCalendars =  this.props.calendar.map(item =>
@@ -52,8 +55,10 @@ class ProviderScheduleList2 extends Component {
                onChange={(e)=> this.setState({content: e.target.value})} id="exampleImage" placeholder="Content" />
              </Col>
            </FormGroup>
-
-           <button style={{color: '#1598AF', marginLeft: '1em', height: '2em', marginBottom: '1em'}} type="Submit">Submit</button>
+           <Row>
+           <button style={{color: '#1598AF', marginLeft: '1em', height: '2em', marginBottom: '1em'}} type="Submit">Filter</button>
+          <button  onClick={this.handleExport} style={{color: '#1598AF', marginLeft: '1em', height: '2em', marginBottom: '1em'}}>Export</button>
+          </Row>
 
             </Row>
          </Form>

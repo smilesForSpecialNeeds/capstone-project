@@ -29,9 +29,7 @@ class ProviderSchedule2 extends Component {
   handleSubmitUpdate = (e) => {
     this.props.updateCalendar(this.state, this.props.calendarItem._id)
   }
-  handleExport = e => {
-
-  }
+  
 
 	handleSubmit = e => {
 		e.preventDefault()
@@ -111,7 +109,6 @@ class ProviderSchedule2 extends Component {
             <CardText><strong>Notes: </strong>{this.props.calendarItem.notes}</CardText>
             <Row>
             <Button style={{height: '2em', textAlign: 'center', width: '7em',lineHeight: '1em', marginLeft: '1em'}} onClick={this.handleSubmit}><strong>Add Note</strong></Button>
-            <Button style={{height: '2em', textAlign: 'center', width: '7em',lineHeight: '1em', marginLeft: '1em'}} onClick={this.handleExport}><strong>Export</strong></Button>
 
 
 

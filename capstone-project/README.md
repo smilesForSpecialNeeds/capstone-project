@@ -1,13 +1,14 @@
 ## User Stories
 
+Complete
+
 - [As a logged in Admin user, the Children tab in the side navigation bar should be changed to Clients. When I navigate to the Clients page I should see a label within each item in the list called Client name, rather than Child Name.]
   - [Status = Complete]
 - [As a non-registered and non-logged in user I can navigate to the /calendar page and view the calendar and view details of scheduled activity events]
   - [Status = Complete]
 - [As a non-registered and non-logged in user I can navigate to the /testimonial page and view the calendar and view a list of testimonials]
     - [Status = Complete]
-- [As a registered user when I attempt to login and I enter the wrong credentials I am redirected back to the login page to try again]
-    - [Status = Pending?]
+
 - [As a logged in Provider user, when I navigate to my Schedule page I will see an input box at the top of a list and an option to filter schedules by date ranges, client name, and type of hours]
       - [Status = Complete]
 
@@ -15,11 +16,22 @@
       - [Status = Complete]
 - [As a logged in Client user, when I navigate to my Schedule page I will see an input box at the top of a list and an option to filter schedules by date ranges]
       - [Status = Complete]
+- [As a logged in Client user, the side navigation bar will extend all the way to the bottom of the dashboard page.]
+      - [Status = Complete]
+- [As a logged in Provider user, when I navigate to my Schedules page and then filter the schedules by date range I will see a master export button at the top of the list.]
+      - [Status = Complete]
+
+
+
+Pending
 - [As a logged in Client user, when I enter in a date range and click submit I will see only schedules for that date range appear.]
     - [Status = Pending]
+- [As a registered user when I attempt to login and I enter the wrong credentials I am redirected back to the login page to try again]
+        - [Status = Pending?]
 - [As a logged in Provider user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them.]
       - [Status = Pending]
-- [As a logged in Provider user, when I navigate to my Schedules page and then filter the schedules by date range I will see a master export button at the bottom of the list and when I click it all my total hours for that date range will be exported to an external Excel spreadsheet.]
+
+- [As a logged in Provider user, when I filter by date range and when I click the export button it will export all my total hours for that date range to an external Excel spreadsheet.]
       - [Status = Pending]
 - [As a logged in Admin user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them. When I enter in a provider name and click submit, I will only see schedules related to that particular provider appear in the list.]
     - [Status = Pending]
@@ -62,8 +74,7 @@
   - [Status = Pending]
 - [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
     - [Status = Pending]
-- [As a logged in Client user, the side navigation bar will extend all the way to the bottom of the dashboard page.]
-    - [Status = Complete]
+
 
 
 
