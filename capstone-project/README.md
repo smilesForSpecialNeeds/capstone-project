@@ -32,6 +32,10 @@ Complete
       - [Status = Complete]
 - [As a logged in Admin user, when I navigate to my Provider page I will see an input box at the top of a list and an option to filter providers by name]
       - [Status = Complete]
+- [As a logged in Admin user, when I navigate to my Client page I will see an input box at the top of a list and an option to filter clients by name]
+      - [Status = Complete]
+- [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
+      - [Status = Complete]
 
 
 
@@ -69,18 +73,12 @@ Pending
 - [As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
     - [Status = Pending]
 
-
-
-
-
 - [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
   - [Status = Pending]
-- [As a logged in Admin user, when I navigate to my Client page I will see an input box at the top of a list and an option to filter clients by name]
-    - [Status = Pending]
+
 - [As a logged in Admin user, when I enter in a client name and click submit I will see only clients with that name.]
   - [Status = Pending]
-- [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
-    - [Status = Pending]
+
 
 
 

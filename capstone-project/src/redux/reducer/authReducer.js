@@ -14,6 +14,7 @@ export default (state=initialState, action) => {
     case USER_LOGIN_SUCCESS:
       localStorage.setItem('admin', action.payload.token)
       localStorage.setItem('name', action.payload.user_name)
+      
 
       // localStorage.setItem('token', JSON.stringify(action.payload.token))
         console.log(action.payload)

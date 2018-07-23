@@ -7,16 +7,20 @@ import { connect } from 'react-redux'
 class ClientScheduleList extends Component {
 
   render(){
-    console.log('props in admin child list',this.props)
+      console.log('USER in Client Schedule List', this.props.user)
+
     const listOfCalendars =  this.props.calendar.map(item =>
-			<ClientSchedule key={item._id} calendarItem={item} />
+      item.assigned_child && item.parent_name === this.props.user.name ?
+			<ClientSchedule key={item._id} calendarItem={item} /> : ''
     )
 
+
     return(
+
       <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
 
       <Row>
-          <Col xs="6">
+          <Col className="schedule-list" xs="6">
       {listOfCalendars}
 
       </Col>
@@ -33,7 +37,9 @@ class ClientScheduleList extends Component {
   }
 }
 function mapStateToProps(state){
-  return {calendar: state.calendarReducer, user: state.userReducer}
+  return {
+    calendar: state.calendarReducer,
+    user: state.authReducer}
 }
 
 export default connect(mapStateToProps)(ClientScheduleList)

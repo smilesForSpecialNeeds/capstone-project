@@ -19,7 +19,7 @@ class ClientMain extends Component {
 		isToggleCalendar:true,
 		isToggleMessages: false,
     isToggleCreateMessage: false,
-    isToggleViewNotes: false,
+    isToggleViewSchedule: false,
     isToggleViewTestimonial: false,
     isToggleNewTestimonail: false
 	}
@@ -29,7 +29,7 @@ class ClientMain extends Component {
 			isToggleCalendar: false,
 			isToggleMessages: false,
       isToggleCreateMessage: false,
-      isToggleViewNotes: false,
+      isToggleViewSchedule: false,
       isToggleViewTestimonial: false,
       isToggleNewTestimonail: false
 		}
@@ -40,8 +40,8 @@ class ClientMain extends Component {
 			resultingState.isToggleCalendar = true
 		} else if (type == 'view_messages') {
 			resultingState.isToggleMessages = true
-    } else if (type == 'view_notes') {
-      resultingState.isToggleViewNotes = true
+    } else if (type == 'view_schedule') {
+      resultingState.isToggleViewSchedule = true
     } else if (type == 'new_testimonial') {
       resultingState.isToggleNewTestimonail = true
     } else if (type == 'view_testimonial') {
@@ -83,7 +83,7 @@ class ClientMain extends Component {
 
         <NavItem>
           <NavLink onClick={() => {
-            this.handleSubmit('view_notes')
+            this.handleSubmit('view_schedule')
           }}>Schedule</NavLink>
         </NavItem>
         </Nav>
@@ -95,7 +95,7 @@ class ClientMain extends Component {
 					{this.state.isToggleCalendar ? <ClientCalendar/>  : null}
 					{this.state.isToggleMessages ? <ClientMessageList/> : null}
 					{this.state.isToggleCreateMessage ? <ClientCreateMessage/> : null}
-          {this.state.isToggleViewNotes? <ClientScheduleList/> : null}
+          {this.state.isToggleViewSchedule ? <ClientScheduleList/> : null}
           {this.state.isToggleViewTestimonial ? <ClientTestimonialList/> : null}
           {this.state.isToggleNewTestimonail ? <ClientAddTestimonial/> : null}
 

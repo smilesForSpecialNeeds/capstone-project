@@ -39,7 +39,7 @@ export const userLogin = (creds, history) => {
 		try {
 			let response = await axios.post(`http://localhost:8000/api/user/login`, creds)
 			let admin = response.data
-      console.log('ADMIN',admin);
+      
 			dispatch({
 				type: USER_LOGIN_SUCCESS,
 				payload: admin
