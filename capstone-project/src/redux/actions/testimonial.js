@@ -12,8 +12,8 @@ export const UPDATE_TESTIMONIAL_FAILED = 'UPDATE_TESTIMONIAL_FAILED'
 export const fetchTestimonial = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let testimonial = await axios.get('http://localhost:8000/api/testimonial', { headers: { Authorization: authHeader}})
+
+			let testimonial = await axios.get('http://localhost:8000/api/testimonial')
 
 			dispatch({
 				type: FETCH_TESTIMONIAL_SUCCESS,

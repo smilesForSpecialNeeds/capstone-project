@@ -12,9 +12,8 @@ export const UPDATE_CALENDAR_FAILED = 'UPDATE_CALENDAR_FAILED'
 export const fetchCalendar = () => {
 	return async dispatch => {
 		try {
-      let authHeader = localStorage.getItem('admin')
-			let calendar = await axios.get('http://localhost:8000/api/calendar',
-      { headers: { Authorization: authHeader}})
+
+			let calendar = await axios.get('http://localhost:8000/api/calendar')
 			dispatch({
 				type: FETCH_CALENDAR_SUCCESS,
 				payload: calendar

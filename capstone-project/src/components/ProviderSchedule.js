@@ -172,7 +172,8 @@ class ProviderSchedule extends Component {
         ): null}
 
       <Row>
-        <Col >
+        <Col>
+      
           <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <strong>Assignment Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
