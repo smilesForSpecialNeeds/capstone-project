@@ -45,7 +45,7 @@ toggleClose = () => {
     return   {
       'start': event.date,
       'end': event.date,
-      'title': event.assigned_child,
+      'title': event.event_name,
       'id': event._id
 
     }
@@ -55,10 +55,10 @@ toggleClose = () => {
 
     let listOfActivities = this.props.activities.map(activity => activity)
 
-    let listOfCalendars = this.props.calendar.filter(item => item.parent_name === this.props.user.name)
+    let listOfCalendars = this.props.calendar.filter(item => item.parent_name === this.props.user.name || !item.assigned_child)
 
 
-    console.log('users in Client Calendar', this.props.user)
+
     return(
 
       <div style={{height: '50em', padding: '3em'}}>
@@ -76,12 +76,11 @@ toggleClose = () => {
      <ModalBody>
 
       <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
-
-      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
-
+      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>End Time:</strong> {this.state.selectedEvent.activities_end}</h6>
       <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
       <h6><strong>Dropoff Address:</strong> {this.state.selectedEvent.dropoff_address}</h6>
-      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
       <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
       <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
      </ModalBody>

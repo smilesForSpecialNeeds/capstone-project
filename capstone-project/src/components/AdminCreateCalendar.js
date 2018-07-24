@@ -16,6 +16,7 @@ class AdminCreateCalendar extends Component {
   child_age: '',
   pickup_address: '',
   dropoff_address: '',
+  activities_end: '',
   parent_name: '',
   hours_type: '',
   hours: '',
@@ -34,7 +35,7 @@ handleSubmit = (e) => {
     return(
       <div>
 
-      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '1.5em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '6em', width: '25em'}}>
+      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '3em', width: '25em'}}>
   <Form style={{padding: '1em', marginRight: '2em'}} onSubmit={this.handleSubmit}>
 
   <FormGroup>
@@ -111,6 +112,13 @@ handleSubmit = (e) => {
         <Col sm={10}>
           <Input type="text" name="pickup_time" value={this.state.pickup_time}
           onChange={(e)=> this.setState({pickup_time: e.target.value})} id="exampleDate" placeholder="Pickup Time" />
+        </Col>
+      </FormGroup>
+      <FormGroup row>
+        <Label for="exampleDate" sm={2}></Label>
+        <Col sm={10}>
+          <Input type="text" name="dropoff_time" value={this.state.activities_end}
+          onChange={(e)=> this.setState({activities_end: e.target.value})} id="exampleDate" placeholder="Dropoff Time" />
         </Col>
       </FormGroup>
       <FormGroup row>

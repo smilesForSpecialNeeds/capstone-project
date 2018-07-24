@@ -12,9 +12,9 @@ class ClientTestimonialList extends Component {
     )
     return(
       <div>
-      
+
       <Row>
-          <Col xs="6">
+          <Col className="schedule-list" xs="6">
       {listOfTestimonials}
 
       </Col>

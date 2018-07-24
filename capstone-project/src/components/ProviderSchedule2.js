@@ -24,6 +24,7 @@ class ProviderSchedule2 extends Component {
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
     pickup_time: this.props.calendarItem.pickup_time,
+    activities_end: this.props.calendarItem.activities_end,
     date: this.props.newDate
   }
 
@@ -98,14 +99,18 @@ class ProviderSchedule2 extends Component {
 
       <Row>
         <Col >
-          <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+          <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <strong>Schedule Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
            {this.props.calendarItem.event_name}</CardText>
-            <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
+
             <CardText><strong>Pickup Location: </strong> {this.props.calendarItem.pickup_address}</CardText>
+            <CardText><strong>Start Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
+            <CardText><strong>End Time: </strong> {this.props.calendarItem.activities_end}</CardText>
+            <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
+
             <CardText><strong>Dropoff Location: </strong> {this.props.calendarItem.dropoff_address}</CardText>
-            <CardText><strong>Pickup Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
+
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>
             <CardText><strong>Hours Type: </strong> {this.props.calendarItem.hours_type}</CardText>
             <CardText><strong>Notes: </strong>{this.props.calendarItem.notes}</CardText>

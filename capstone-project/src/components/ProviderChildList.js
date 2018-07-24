@@ -23,7 +23,7 @@ class ProviderChildList extends Component {
     )
 
     return(
-      <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+      <div >
 
       <Row>
           <Col className="schedule-list" xs="6">

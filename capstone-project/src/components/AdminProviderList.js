@@ -23,7 +23,7 @@ class AdminProviderList extends Component {
       )
 
       return(
-        <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+        <div >
 
         <Row>
             <Col className="provider-list"  xs="6">

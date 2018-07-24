@@ -14,7 +14,7 @@ const Testimonial =(props) => {
     <Row >
     <Row >
 
-        <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.2)',border: 'solid', borderWidth: 'thin'}}>
+        <Card body style={{ width: '35em', height: '15em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.2)',border: 'solid', borderWidth: 'thin'}}>
           <CardText> <strong>Posting Date: </strong>  {newDate}</CardText>
           <CardText><strong>Name: </strong>
          {props.testimonialItem.name}</CardText>

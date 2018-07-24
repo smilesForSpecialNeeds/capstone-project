@@ -25,6 +25,7 @@ export default (state = initialState, action) => {
 		case DELETE_TESTIMONIAL_SUCCESS:
 			const testimonialId = action.payload._id
 			return state.filter(testimonial => testimonial._id !== testimonialId)
+			
 		case DELETE_TESTIMONIAL_FAILED:
 			return action.payload
 		case UPDATE_TESTIMONIAL_SUCCESS:

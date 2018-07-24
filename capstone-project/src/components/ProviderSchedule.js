@@ -26,6 +26,7 @@ class ProviderSchedule extends Component {
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
     pickup_time: this.props.calendarItem.pickup_time,
+    activities_end: this.props.calendarItem.activities_end,
     date: this.props.calendarItem.date
   }
 
@@ -158,6 +159,13 @@ class ProviderSchedule extends Component {
                     onChange={(e)=> this.setState({pickup_time: e.target.value})} id="exampleDate" placeholder="Pickup Time" />
                   </Col>
                 </FormGroup>
+                <FormGroup row>
+                  <Label for="exampleDate" sm={2}></Label>
+                  <Col sm={10}>
+                    <Input type="text" name="dropoff_time" value={this.state.activities_end}
+                    onChange={(e)=> this.setState({activities_end: e.target.value})} id="exampleDate" placeholder="Dropoff Time" />
+                  </Col>
+                </FormGroup>
                 <Button  style={{marginLeft:'12em', marginBottom:'10px', marginRight:'430px', color:'#1476A8'}}>Submit</Button>
                 </Form>
                 <Button
@@ -182,14 +190,16 @@ class ProviderSchedule extends Component {
       <Row>
         <Col>
 
-          <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+          <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <strong>Assignment Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
            {this.props.calendarItem.event_name}</CardText>
+           <CardText><strong>Start Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
+           <CardText><strong>End Time: </strong> {this.props.calendarItem.activities_end}</CardText>
             <CardText><strong>Client Name: </strong> {this.props.calendarItem.assigned_child}</CardText>
             <CardText><strong>Pickup Location: </strong> {this.props.calendarItem.pickup_address}</CardText>
             <CardText><strong>Dropoff Location: </strong> {this.props.calendarItem.dropoff_address}</CardText>
-            <CardText><strong>Pickup Time: </strong> {this.props.calendarItem.pickup_time}</CardText>
+
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>
             <CardText><strong>Hours Type: </strong> {this.props.calendarItem.hours_type}</CardText>
             <CardText><strong>Notes: </strong>{this.props.calendarItem.notes}</CardText>

@@ -28,7 +28,7 @@ handleSubmit = (e) => {
 
     return(
       <div>
-      <div style={{ fontSize:'20px', color:'#1476A8', width: '25em', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginRight: '2em'}}>
+      <div style={{ fontSize:'20px', color:'#1476A8', width: '25em', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginRight: '2em', marginLeft: '3em'}}>
       <Form style={{padding: '1em', marginRight: '2em'}} onSubmit={this.handleSubmit}>
 
 

@@ -25,7 +25,7 @@ class AdminChildList extends Component {
     // )
 
     return(
-      <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+      <div >
 
       <Row>
           <Col xs="6" className="child-list">

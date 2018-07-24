@@ -52,7 +52,7 @@ export const deleteTestimonial = id => {
 			let newTestimonial = await axios.delete(`http://localhost:8000/api/testimonial/${id}`,{ headers: { Authorization: authHeader}})
 			dispatch({
 				type: DELETE_TESTIMONIAL_SUCCESS,
-				payload: newTestimonial.data[0]
+				payload: newTestimonial.data
 			})
 		} catch (err) {
 			dispatch({
@@ -67,7 +67,8 @@ export const updateTestimonial = (testimonial, id) => {
       let authHeader = localStorage.getItem('admin')
 		try {
 			let testimonialUpdate = await axios.patch(
-				`http://localhost:8000/api/testimonial/edit/${id}`,{ headers: { Authorization: authHeader}})
+				`http://localhost:8000/api/testimonial/edit/${id}`,
+				testimonial, { headers: { Authorization: authHeader}})
 
 			dispatch({
 				type: UPDATE_TESTIMONIAL_SUCCESS,

@@ -49,7 +49,7 @@ toggleClose = () => {
 
   render(){
     let listOfCalendars = this.props.calendar.map(item => item)
-    console.log(listOfCalendars)
+
     return(
 
       <div style={{height: '40em', marginLeft: '6em', marginTop: '2em'}}>
@@ -66,13 +66,13 @@ toggleClose = () => {
      <ModalBody>
 
       <h6><strong>Provider Name:</strong> {this.state.selectedEvent.event_name}</h6>
-
-      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+      <h6><strong>Start Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
       <h6><strong>End Time:</strong> {this.state.selectedEvent.activities_end}</h6>
 
       <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
       <h6><strong>Dropoff Address:</strong> {this.state.selectedEvent.dropoff_address}</h6>
-      <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>Assigned Client:</strong> {this.state.selectedEvent.assigned_child}</h6>
+
       <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
       <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
      </ModalBody>

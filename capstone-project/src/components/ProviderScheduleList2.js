@@ -14,7 +14,7 @@ class ProviderScheduleList2 extends Component {
   }
 
   handleFilter = () => {
-
+  
   }
   handleExport = () => {
 
@@ -24,10 +24,12 @@ class ProviderScheduleList2 extends Component {
     const listOfCalendars =  this.props.calendar.map(item =>
 			item.assigned_child && item.event_name === this.props.user.name ? <ProviderSchedule2 key={item.id} calendarItem={item} /> : ''
     )
+console.log(listOfCalendars)
+
 
 
     return(
-      <div style={{ marginBottom: '3em', marginLeft: '2em'}}>
+      <div >
 
       <Row>
           <Col className="schedule-list" xs="6">

@@ -27,7 +27,7 @@ handleSubmit = (e) => {
     return(
       <div>
 
-      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '1.5em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '6em', width: '25em'}}>
+      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '3em', width: '25em'}}>
   <Form style={{padding: '1em', marginRight: '2em'}} onSubmit={this.handleSubmit}>
 
   <FormGroup>

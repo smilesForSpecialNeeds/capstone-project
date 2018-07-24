@@ -154,7 +154,7 @@ componentDidMount(props){
 
       <Row>
         <Col >
-          <Card body style={{ width: '20em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+          <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <img src={this.props.childItem.child_img} alt="Generic placeholder image" style={{width:'100px', height:'100px', marginLeft: '10px'}} /></CardText>
             <CardText> <strong>Date: </strong>  {newDate}</CardText>
             <CardText><strong>Client Name: </strong> {this.props.childItem.child_name}</CardText>

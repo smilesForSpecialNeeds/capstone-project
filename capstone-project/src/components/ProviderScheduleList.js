@@ -22,10 +22,10 @@ class ProviderScheduleList extends Component {
 
 
     return(
-      <div style={{ marginBottom: '3em'}}>
+      <div >
 
       <Row>
-          <Col className="schedule-list" xs="5">
+          <Col className="child-list" xs="6">
           <div style={{width: '25em', height: '8em', margin: 'auto', marginTop: '2em', border: 'solid #1598AF',borderWidth: 'thin', padding: '1em', marginBottom: '2em', backgroundColor: 'rgba(0,151,201, 0.4)'}}>
 
           <Form onSubmit={this.handleFilter}>
