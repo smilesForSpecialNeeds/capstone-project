@@ -36,6 +36,10 @@ Complete
       - [Status = Complete]
 - [As a logged in Client user, when I navigate to the Schedule page I should see only a list of my own child's schedules in a list.]
       - [Status = Complete]
+- [As an Provider and Client user logged in, when I look at the main calendar I will see activity events (example: movie night, etc.) and when I click on a specific one, a modal box will appear with the name of the event, location, start, and end time appearing]
+      - [Status = Complete]
+- [As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
+      - [Status = Complete]
 
 
 
@@ -68,10 +72,7 @@ Pending
 
 - [As an admin logged in, when I look at the main calendar I will see only one button per provider name per day and when I click that button a modal will pop up with a list of all the assigned schedules for that provider for that day. When I click on a particular schedule from the list, the details of that one specific schedule will then appear beneath the list.]
     - [Status = Pending]
-- [As an Provider and Client user logged in, when I look at the main calendar I will see activity events (example: movie night, etc.) and when I click on a specific one, a modal box will appear with the name of the event, location, start, and end time appearing]
-    - [Status = Pending]
-- [As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
-    - [Status = Pending]
+
 
 - [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
   - [Status = Pending]

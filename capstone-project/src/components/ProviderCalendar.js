@@ -42,15 +42,21 @@ class ProviderCalendar extends React.Component {
     return   {
       'start': event.date,
       'end': event.date,
-      'title': event.assigned_child,
+      'title': event.event_name,
       'id': event._id
 
     }
   })
 
   render(){
-    let listOfCalendars = this.props.calendar.filter(item => item.event_name === this.props.user.name )
-    console.log('users in Provider Calendar', this.props.user)
+    
+    let listOfActivities = this.props.calendar.filter(item => !item.assigned_child)
+
+    let listOfSchedules = this.props.calendar.filter(item => item.event_name === this.props.user.name)
+
+    let listOfCalendars = listOfActivities.concat(listOfSchedules)
+
+
 
 
     return(
@@ -75,6 +81,7 @@ class ProviderCalendar extends React.Component {
       <h6><strong>Pickup Address:</strong> {this.state.selectedEvent.pickup_address}</h6>
       <h6><strong>Dropoff Address:</strong> {this.state.selectedEvent.dropoff_address}</h6>
       <h6><strong>Pickup Time:</strong> {this.state.selectedEvent.pickup_time}</h6>
+      <h6><strong>Dropoff Time:</strong> {this.state.selectedEvent.activities_end}</h6>
       <h6><strong>Hours:</strong> {this.state.selectedEvent.hours}</h6>
       <h6><strong>Hours Type:</strong> {this.state.selectedEvent.hours_type}</h6>
      </ModalBody>
