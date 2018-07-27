@@ -128,7 +128,7 @@ class AdminActivities extends Component {
       <Row>
         <Col>
 
-          <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+          <Card body style={{ width: '25em', marginLeft: '2em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <strong>Assignment Date: </strong>  {newDate}</CardText>
             <CardText><strong>Activity Name: </strong>{this.props.calendarItem.event_name}</CardText>
             <CardText><strong> Location: </strong> {this.props.calendarItem.pickup_address}</CardText>

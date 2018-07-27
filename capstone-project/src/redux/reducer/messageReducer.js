@@ -23,8 +23,9 @@ export default (state = initialState, action) => {
 		case ADD_MESSAGE_FAILED:
 			return action.payload
 		case DELETE_MESSAGE_SUCCESS:
-			const messageId = action.payload.id
-			return state.filter(message => message.id !== messageId)
+			const messageId = action.payload._id
+			return state.filter(message => message._id !== messageId)
+
 		case DELETE_MESSAGE_FAILED:
 			return action.payload
 		case UPDATE_MESSAGE_SUCCESS:

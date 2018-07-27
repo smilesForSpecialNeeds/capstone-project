@@ -4,6 +4,7 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText, Row } from 'react
 import { addCalendar} from '../redux/actions/calendar'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import Moment from 'moment';
 
 
 
@@ -20,6 +21,7 @@ class AdminCreateCalendar extends Component {
   parent_name: '',
   hours_type: '',
   hours: '',
+  ratio: '',
   pickup_time: '',
   date: '',
   notes: ''
@@ -32,10 +34,12 @@ handleSubmit = (e) => {
 
   render(){
     console.log('state in AdminCreateCalandar', this.state)
+
+      let newDate = <Moment>{this.state.date}.add(1, 'd')</Moment>
     return(
       <div>
 
-      <div style={{ fontSize:'20px', color:'#1476A8', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginLeft: '3em', width: '25em'}}>
+      <div style={{ fontSize:'20px', color:'#1476A8', width: '25em', marginTop: '2em',  border: 'solid #1598AF', borderWidth: 'thin', marginBottom: '2em',backgroundColor: 'rgba(0,151,201, 0.4)', marginRight: '1em', marginLeft: '2em'}}>
   <Form style={{padding: '1em', marginRight: '2em'}} onSubmit={this.handleSubmit}>
 
   <FormGroup>
@@ -77,6 +81,13 @@ handleSubmit = (e) => {
         <Col sm={10}>
           <Input type="text" name="hours" value={this.state.hours}
           onChange={(e)=> this.setState({hours: e.target.value})} id="exampleDate" placeholder="Hours" />
+        </Col>
+      </FormGroup>
+      <FormGroup row>
+        <Label for="exampleDate" sm={2}></Label>
+        <Col sm={10}>
+          <Input type="text" name="ratio" value={this.state.ratio}
+          onChange={(e)=> this.setState({ratio: e.target.value})} id="exampleDate" placeholder="Ratio" />
         </Col>
       </FormGroup>
       <FormGroup row>

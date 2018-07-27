@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 
 
-class ProviderCreateMessage extends Component {
+class AdminCreateMessage extends Component {
 
   state = {
 
@@ -70,7 +70,7 @@ handleSubmit = (e) => {
           onChange={(e)=> this.setState({body: e.target.value})} id="exampleDate" placeholder="Body" />
         </Col>
       </FormGroup>
-
+      
 
       <Button  style={{marginLeft:'5em', marginBottom:'10px', marginRight:'430px', color:'#1476A8'}} >Submit</Button>
       </Form>
@@ -84,4 +84,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   addMessage
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(ProviderCreateMessage)
+export default connect(null, mapDispatchToProps)(AdminCreateMessage)

@@ -22,7 +22,7 @@ class AdminCalendar extends React.Component {
   }
 
   toggle = (...args) => {
-    console.log('calendar', args[0])
+
     let theEvent = this.props.calendar.filter(event => event._id == args[0].id)[0]
     console.log('the event', theEvent)
     this.setState({
@@ -39,9 +39,10 @@ toggleClose = () => {
 
 
   consolidateEventData = (arr) => arr.map(event => {
+    let newDate = moment(event.date).add(moment.duration(1, 'days'))
     return   {
-      'start': event.date,
-      'end': event.date,
+      'start': new Date(newDate),
+      'end': new Date (newDate),
       'title': event.event_name,
       'id': event._id
     }

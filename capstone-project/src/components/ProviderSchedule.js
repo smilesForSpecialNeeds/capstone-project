@@ -27,6 +27,7 @@ class ProviderSchedule extends Component {
     hours: this.props.calendarItem.hours,
     pickup_time: this.props.calendarItem.pickup_time,
     activities_end: this.props.calendarItem.activities_end,
+    ratio: this.props.calendarItem.ratio,
     date: this.props.calendarItem.date
   }
 
@@ -56,7 +57,12 @@ class ProviderSchedule extends Component {
 	}
 
   render(){
-    		let newDate = moment(this.props.calendarItem.date).format('YYYY-MM-DD')
+      		
+          let newDate = moment(this.props.calendarItem.date).add(moment.duration(1, 'days')).format("MMMM D, YYYY")
+
+
+
+
         console.log(this.props.calendarItem)
     return(
       <div >
@@ -148,6 +154,13 @@ class ProviderSchedule extends Component {
                 <FormGroup row>
                   <Label for="exampleDate" sm={2}></Label>
                   <Col sm={10}>
+                    <Input type="text" name="ratio" value={this.state.ratio}
+                    onChange={(e)=> this.setState({ratio: e.target.value})} id="exampleDate" placeholder="Ratio" />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="exampleDate" sm={2}></Label>
+                  <Col sm={10}>
                     <Input type="text" name="hours_type" value={this.state.hours_type}
                     onChange={(e)=> this.setState({hours_type: e.target.value})} id="exampleDate" placeholder="Hours Type" />
                   </Col>
@@ -190,7 +203,7 @@ class ProviderSchedule extends Component {
       <Row>
         <Col>
 
-          <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
+          <Card body style={{ width: '25em', marginLeft: '2em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
             <CardText> <strong>Assignment Date: </strong>  {newDate}</CardText>
             <CardText><strong>Provider Name: </strong>
            {this.props.calendarItem.event_name}</CardText>
@@ -202,6 +215,7 @@ class ProviderSchedule extends Component {
 
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>
             <CardText><strong>Hours Type: </strong> {this.props.calendarItem.hours_type}</CardText>
+            <CardText><strong>Ratio: </strong> {this.props.calendarItem.ratio}</CardText>
             <CardText><strong>Notes: </strong>{this.props.calendarItem.notes}</CardText>
             <Row>
             <Button style={{height: '2em', textAlign: 'center', width: '7em',lineHeight: '1em', marginLeft: '1em'}} onClick={this.handleSubmit}><strong>Update</strong></Button>

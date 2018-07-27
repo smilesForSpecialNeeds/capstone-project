@@ -21,7 +21,7 @@ class AdminActivitiesList extends Component {
       {listOfActivities}
 
       </Col>
-            <Col xs="6" >
+            <Col xs="4" >
             <AdminCreateActivity/>
             </Col>
 

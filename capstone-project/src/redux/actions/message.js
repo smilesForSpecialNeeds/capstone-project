@@ -30,7 +30,7 @@ export const fetchMessage = () => {
 export const addMessage = message => {
 	return async dispatch => {
 		try {
-      let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+      let authHeader = localStorage.getItem('admin')
 			let newMessage = await axios.post(`http://localhost:8000/api/message`, message, { headers: { Authorization: authHeader}})
 			dispatch({
 				type: ADD_MESSAGE_SUCCESS,
@@ -46,12 +46,12 @@ export const addMessage = message => {
 }
 export const deleteMessage= id => {
 	return async dispatch => {
-    let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+  let authHeader = localStorage.getItem('admin')
 		try {
 			let newMessage = await axios.delete(`http://localhost:8000/api/message/${id}`,{ headers: { Authorization: authHeader}})
 			dispatch({
 				type: DELETE_MESSAGE_SUCCESS,
-				payload: newMessage.data[0]
+				payload: newMessage.data
 			})
 		} catch (err) {
 			dispatch({
@@ -63,7 +63,7 @@ export const deleteMessage= id => {
 }
 export const updateMessage = (message, id) => {
 	return async dispatch => {
-    let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+      let authHeader = localStorage.getItem('admin')
 		try {
 			let messageUpdate = await axios.patch(
 				`http://localhost:8000/api/message/edit/${id}`,

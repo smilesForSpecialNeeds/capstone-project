@@ -8,21 +8,31 @@ import { connect } from 'react-redux'
 class AdminChildList extends Component {
   state = {
     filter: '',
-    content: ''
+    content: '',
+    isChild: false,
+    isNoFilter: true
   }
 
-  handleFilter = () => {
-
+  handleFilter = (e) => {
+    e.preventDefault()
+    if(this.state.filter === 'Client Name'){
+      this.setState({
+        isChild: true,
+        isNoFilter: false,
+      })
   }
+}
+
 
   render(){
     console.log('props in admin child list',this.props)
     const listOfChilds =  this.props.child.map(item =>
 			<AdminChild key={item._id} childItem={item} />
     )
-    // listOfNotes = this.props.notes.map(note =>
-    //   <AdminChild key={note._id} noteItem={note} />
-    // )
+    const oneChildList =  this.props.child.map(item =>
+     item.child_name === this.state.content ? <AdminChild key={item.id} childItem={item} /> : ''
+    )
+
 
     return(
       <div >
@@ -38,6 +48,7 @@ class AdminChildList extends Component {
              <Label for="exampleSelect"></Label>
               <Col sm={10}>
              <Input type="select" value={this.state.filter} onChange={(e) => this.setState({filter: e.target.value})} name="select" id="exampleSelect" >
+              <option>Select</option>
               <option>Client Name</option>
 
              </Input>
@@ -56,10 +67,11 @@ class AdminChildList extends Component {
             </Row>
          </Form>
          </div>
-      {listOfChilds}
+         {this.state.isNoFilter ? listOfChilds  : null}
+         {this.state.isChild ? oneChildList  : null}
 
       </Col>
-            <Col xs="6" >
+            <Col xs="4" >
             <AdminCreateChild/>
             </Col>
 

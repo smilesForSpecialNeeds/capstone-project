@@ -46,7 +46,7 @@ class ClientSchedule extends Component {
 	}
 
   render(){
-    		let newDate = moment(this.props.calendarItem.date).format('YYYY-MM-DD')
+    		let newDate = moment(this.props.calendarItem.date).add(moment.duration(1, 'days')).format("MMMM D, YYYY")
         console.log(this.props.calendarItem)
     return(
       <div>

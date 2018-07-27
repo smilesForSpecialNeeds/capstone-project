@@ -112,7 +112,7 @@ class AdminTestimonial extends Component {
 
     <Row>
       <Col >
-        <Card body style={{ width: '35em', marginLeft: '5em', marginTop: '2em', border: 'solid', borderWidth: 'thin', backgroundColor: 'rgba(0,151,201, 0.4)'}}>
+        <Card body style={{ width: '25em', marginLeft: '2em', marginTop: '2em', backgroundColor: 'rgba(0,151,201, 0.4)',border: 'solid', borderWidth: 'thin'}}>
           <CardText> Date: {newDate}</CardText>
           <CardText>Name: {this.props.testItem.name}</CardText>
           <CardText> Subject: {this.props.testItem.content}</CardText>

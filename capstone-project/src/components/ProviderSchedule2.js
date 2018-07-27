@@ -23,6 +23,7 @@ class ProviderSchedule2 extends Component {
     parent_name: this.props.calendarItem.parent_name,
     hours_type: this.props.calendarItem.hours_type,
     hours: this.props.calendarItem.hours,
+    ratio: this.props.calendarItem.ratio,
     pickup_time: this.props.calendarItem.pickup_time,
     activities_end: this.props.calendarItem.activities_end,
     date: this.props.newDate
@@ -47,7 +48,7 @@ class ProviderSchedule2 extends Component {
 	}
 
   render(){
-    		let newDate = moment(this.props.calendarItem.date).format('YYYY-MM-DD')
+    		let newDate = moment(this.props.calendarItem.date).add(moment.duration(1, 'days')).format("MMMM D, YYYY")
         console.log(this.props.calendarItem)
     return(
       <div>
@@ -112,6 +113,7 @@ class ProviderSchedule2 extends Component {
             <CardText><strong>Dropoff Location: </strong> {this.props.calendarItem.dropoff_address}</CardText>
 
             <CardText><strong>Hours: </strong> {this.props.calendarItem.hours}</CardText>
+            <CardText><strong>Ratio: </strong> {this.props.calendarItem.ratio}</CardText>
             <CardText><strong>Hours Type: </strong> {this.props.calendarItem.hours_type}</CardText>
             <CardText><strong>Notes: </strong>{this.props.calendarItem.notes}</CardText>
             <Row>

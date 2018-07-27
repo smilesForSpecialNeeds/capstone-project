@@ -39,9 +39,10 @@ class ProviderCalendar extends React.Component {
 
 
   consolidateEventData = (arr) => arr.map(event => {
+    let newDate = moment(event.date).add(moment.duration(1, 'days'))
     return   {
-      'start': event.date,
-      'end': event.date,
+      'start': new Date(newDate),
+      'end': new Date(newDate),
       'title': event.event_name,
       'id': event._id
 
@@ -49,7 +50,7 @@ class ProviderCalendar extends React.Component {
   })
 
   render(){
-    
+
     let listOfActivities = this.props.calendar.filter(item => !item.assigned_child)
 
     let listOfSchedules = this.props.calendar.filter(item => item.event_name === this.props.user.name)

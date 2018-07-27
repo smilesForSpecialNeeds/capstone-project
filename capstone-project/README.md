@@ -40,6 +40,13 @@ Complete
       - [Status = Complete]
 - [As an Admin user, when I navigate to the Testimonials page in my dashboard I will see a list of all the testimonials posted by clients displaying the date, name of poster, and body of the post. Below each testimonial will be a delete button. When I click on the button, that particular testimonial will be deleted from the list. It will also be deleting it from the main testimonial page.]
       - [Status = Complete]
+- [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
+      - [Status = Complete]
+
+- [As a logged in Admin user, when I enter in a client name and click submit I will see only clients with that name.]
+      - [Status = Complete]
+- [As a logged in Admin user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them. When I enter in a provider name and click submit, I will only see schedules related to that particular provider appear in the list.]
+      - [Status = Complete]
 
 
 
@@ -54,8 +61,7 @@ Pending
 
 - [As a logged in Provider user, when I filter by date range and when I click the export button it will export all my total hours for that date range to an external Excel spreadsheet.]
       - [Status = Pending]
-- [As a logged in Admin user, when I enter in a date range and click submit I will see only schedules for that date range appear. When I enter in a client name and click submit, I will only see schedules associated with that client. When I enter in a particular type of hours, I will only see schedules with that type of hours associated with them. When I enter in a provider name and click submit, I will only see schedules related to that particular provider appear in the list.]
-    - [Status = Pending]
+
 
 - [As a logged in Provider user, when I enter a particular client name into the input field and click submit I will only see that particular client show up in the list]
     - [Status = Pending]
@@ -74,11 +80,7 @@ Pending
     - [Status = Pending]
 
 
-- [As a logged in Admin user, when I enter in a provider name and click submit I will see only providers with that name.]
-  - [Status = Pending]
 
-- [As a logged in Admin user, when I enter in a client name and click submit I will see only clients with that name.]
-  - [Status = Pending]
 
 
 

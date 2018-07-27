@@ -42,9 +42,10 @@ toggleClose = () => {
 
 
   consolidateEventData = (arr) => arr.map(event => {
+    let newDate = moment(event.date).add(moment.duration(1, 'days'))
     return   {
-      'start': event.date,
-      'end': event.date,
+      'start': new Date(newDate),
+      'end': new Date(newDate),
       'title': event.event_name,
       'id': event._id
 

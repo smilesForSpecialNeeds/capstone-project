@@ -8,18 +8,30 @@ import { connect } from 'react-redux'
 class AdminProviderList extends Component {
   state = {
     filter: '',
-    content: ''
+    content: '',
+    isProvider: false,
+    isNoFilter: true
   }
 
-  handleFilter = () => {
-
+  handleFilter = (e) => {
+    e.preventDefault()
+    if(this.state.filter === 'Provider Name'){
+      this.setState({
+        isProvider: true,
+        isNoFilter: false,
+      })
   }
+}
 
   render(){
     console.log(this.props.provider)
-    if(this.props.provider){
+    console.log(this.state)
+
       const listOfProviders =  this.props.provider.map(item =>
   			<AdminProvider key={item.id} providerItem={item} />
+      )
+      const providerListOfCalendars =  this.props.provider.map(item =>
+       item.name === this.state.content ? <AdminProvider key={item.id} providerItem={item} /> : ''
       )
 
       return(
@@ -36,6 +48,7 @@ class AdminProviderList extends Component {
                <Label for="exampleSelect"></Label>
                 <Col sm={10}>
                <Input type="select" value={this.state.filter} onChange={(e) => this.setState({filter: e.target.value})} name="select" id="exampleSelect" >
+                <option>Select</option>
                 <option>Provider Name</option>
 
                </Input>
@@ -54,11 +67,12 @@ class AdminProviderList extends Component {
               </Row>
            </Form>
            </div>
+           {this.state.isNoFilter ? listOfProviders  : null}
+           {this.state.isProvider ? providerListOfCalendars  : null}
 
-        {listOfProviders}
 
         </Col>
-              <Col xs="6" >
+              <Col xs="4" >
               <AdminCreateProvider/>
               </Col>
 
@@ -68,13 +82,6 @@ class AdminProviderList extends Component {
 
         </div>
       )
-    }else{
-
-      return(
-        <div>Loading....
-        </div>
-      )
-    }
   }
 }
 function mapStateToProps(state){
